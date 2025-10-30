@@ -4,18 +4,18 @@ class Karyawan {
         this.gaji = gaji;
     }
 
-    hitungbonus(){
+    hitungBonus(){
         return 0;
     }
 
     getinfo() {
-        return `Nama: ${this.nama}, Gaji: ${this.gaji.toLocalString('id-ID')}`;
+        return `Nama: ${this.nama}, Gaji: ${this.gaji.toLocaleString('id-ID')}`;
     }
 }
 
 class KaryawanTetap extends Karyawan {
 
-    hitungbonus() {
+    hitungBonus() {
         return this.gaji * 0.10;
     }
 }
@@ -45,4 +45,5 @@ daftarKaryawan.forEach(karyawan => {
 });
 
 console.log("\n----------");
+
 console.log(`Total Bonus Seluruh Karyawan: ${totalBonus.toLocaleString('id-ID')}`);
